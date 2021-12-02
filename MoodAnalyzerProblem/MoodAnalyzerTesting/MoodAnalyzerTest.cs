@@ -1,4 +1,4 @@
-using MoodAnalyzerProblem;
+ using MoodAnalyzerProblem;
 using NUnit.Framework;
 
 namespace MoodAnalyzerTesting
@@ -23,6 +23,13 @@ namespace MoodAnalyzerTesting
         {
             string output = "HAPPY";
             string result = mood.AnalyzeMood("I am in Any Mood");
+            Assert.AreEqual(output, result);
+        }
+        [Test]
+        public void GivenNullMessage_WhenAnalyze_ShouldReturnHappy()
+        {
+            string output = "HAPPY";
+            string result = mood.AnalyzeMood("NULL");
             Assert.AreEqual(output, result);
         }
     }
